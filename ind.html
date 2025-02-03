@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Code-War</title>
+    <link rel="icon" type="image/x-icon" href="/static/dev.ico">
+    <meta name="description" content="Code-War powered by CS Dept. | AIDS | MCS  @ PGMCOE ">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            height: 100%;
+            max-width: 100%;
+            margin: 0;
+            overflow: hidden;
+            /* background: rgba(0, 10, 20, 1) url(https://i.imgur.com/r838U7u.jpg) center no-repeat; */
+            background-color: rgb(0, 10, 20);
+            /* background-image: url("src/bg2.gif"); */
+            background-position: center;
+            background-size: cover;
+            image-rendering: pixelated;
+            font-family: sans-serif
+        }
+
+        #w {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+
+        }
+
+        .splash {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background-color: black;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .animated-gradient {
+            background: repeating-linear-gradient(to right, #00FFFF 0%, #9F00FF 50%, #00FFFF 100%);
+            width: 100%;
+            height: 5px;
+            background-size: 200% auto;
+            background-position: 0 100%;
+            animation: gradient 2s infinite;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+            margin: 50px;
+            border-radius: 50px;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: -50% 0
+            }
+
+            50% {
+                background-position: 150% 0
+            }
+
+            to {
+                background-position: -50% 0
+            }
+        }
+
+
+
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            position: absolute;
+
+            width: 90vw;
+            height: 90vh;
+            margin-top: 5vh;
+            margin-left: 5vw;
+            z-index: 100;
+            opacity: 0;
+            color: white;
+            border-radius: 20px;
+            /* text-shadow: "0 0 5px cyan, 0 0 10px cyan, 0 0 20px cyan, 0 0 40px rgba(0, 255, 255, 0.8)"; */
+            overflow: scroll;
+        }
+
+        .neon {
+            font-family: monospace;
+            font-size: 4em;
+            color: white;
+            text-align: center;
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(66, 220, 219, 0.8), 0 0 30px rgba(66, 220, 219, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 50px rgba(66, 220, 219, 0.5), 0 0 80px rgba(66, 220, 219, 0.5);
+
+            /* animation: neonGlow 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955); */
+        }
+
+        @keyframes neonGlow {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 60px rgba(66, 220, 219, 0.8), 0 0 80px rgba(66, 220, 219, 0.5), 0 0 100px rgba(66, 220, 219, 0.5), 0 0 140px rgba(66, 220, 219, 0.5), 0 0 200px rgba(66, 220, 219, 0.5);
+            }
+
+            100% {
+                text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(66, 220, 219, 0.8), 0 0 30px rgba(66, 220, 219, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 50px rgba(66, 220, 219, 0.5), 0 0 80px rgba(66, 220, 219, 0.5);
+            }
+        }
+
+        .main-div {
+            width: 100%;
+            min-height: 100%;
+            height: 100vh;
+            /* top: 0;
+    left: 0;
+    position: absolute; */
+            overflow: scroll;
+            overflow: scroll;
+            scroll-snap-type: y mandatory;
+
+        }
+
+        #clg_name {
+            margin-top: -40px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+        }
+
+        .headline {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 3em;
+            color: rgba(250, 249, 249, 0.8);
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(66, 220, 219, 0.8), 0 0 30px rgba(66, 220, 219, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 50px rgba(66, 220, 219, 0.5), 0 0 80px rgba(66, 220, 219, 0.5);
+            /* text-shadow: 0.5em 0em 0.5em rgb(0, 225, 255) */
+        }
+
+        .midline {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2em;
+            color: rgba(250, 249, 249, 0.8);
+            /* text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(66, 220, 219, 0.8), 0 0 30px rgba(66, 220, 219, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 50px rgba(66, 220, 219, 0.5), 0 0 80px rgba(66, 220, 219, 0.5); */
+            text-shadow: 0.1em 0.1em 0.1em rgb(0, 225, 255)
+        }
+
+        .language {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .flt {
+            animation: moveUpDown 2s infinite;
+        }
+
+        @keyframes moveUpDown {
+            0% {
+                margin-bottom: 0;
+            }
+
+            30% {
+                margin-bottom: -20px;
+            }
+
+            100% {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="splash" class="splash">
+        <div class="animated-gradient"></div>
+    </div>
+    <!-- <div class="glass" id="glass">
+		<div style="width: 100%; min-height: 100%; display: flex; justify-content: center; align-items: center;">
+			<div>
+				<p class="neon">CodeWar</p>
+			</div>
+			
+			
+		</div>
+		<div style="width: 100%; min-height: 100%; display: flex; justify-content: center; align-items: center;">
+			<div>
+				<p class="neon">Hello_World</p>
+			</div>
+			
+			
+		</div>
+		
+	</div> -->
+    <div class="main-div">
+        <div
+            style="scroll-snap-align: start; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">
+            <div style="display: inline-block; 
+                /* background-color: white; */
+                text-align: center;
+                ">
+
+                <p class="neon" style="margin-top: 0px;">
+                    <span id="type-write"></span>
+                <p id="clg_name" style="display: none; color: white;">Computer Science Department</p>
+                </p>
+            </div>
+
+
+
+
+        </div>
+        <div style="scroll-snap-align: start; width: 100%; height: 100vh; 
+            /* background-color: rgba(240, 248, 255, 0.085); */
+            overflow: scroll;
+            ">
+
+            <div style="width: 80%; height: 100px; text-align: center; padding-left: 20px; text-align: left;">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <span class="headline">Showcase <br>your <br>skills...!</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="language">
+                <div style="width: 80%; border-radius: 20px; 
+                border: 1px solid rgba(255, 255, 255, 0.248);
+                background-color: rgba(137, 194, 243, 0.065);">
+                    <div style="width: 100%; padding-left: 20px;">
+                        <br>
+                        <p class="midline">Code in your favorite language :</p>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div style="width: 100%; display: flex; justify-content: center;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"
+                            alt="Python" width="100" height=auto>
+                        <!-- <img src="src/cpp.png" alt="C ++" height="90" width=auto style="margin-left: 100px;"> -->
+
+                    </div>
+                    <br>
+                    <br>
+                    <div style="width: 100%; display: flex; justify-content: center;">
+                        <!-- <img src="src/python.png" alt="Python" width="100" height=auto style="margin-right: 100px;"> -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/683px-ISO_C%2B%2B_Logo.svg.png"
+                            alt="C ++" height="90" width=auto>
+
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                </div>
+
+            </div>
+
+            <div style="width: 80%; height: 100px; text-align: center; padding-left: 20px; text-align: left;">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <span class="headline">Earn <br>exciting <br>prices...!</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="language">
+                <div style="width: 80%; border-radius: 20px; 
+                border: 1px solid rgba(255, 255, 255, 0.248);
+                background-color: rgba(137, 194, 243, 0.065);">
+                    <div style="width: 100%; padding-left: 20px;">
+                        <br>
+                        <p class="midline">Price Pool :</p>
+                        <center>
+
+                            <p class="headline" style="margin-left: -20px;">₹5000+</p>
+                        </center>
+                        <!-- <p class="midline">Code in your favorite language :</p> -->
+                    </div>
+                    <br>
+                    <br>
+
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="language">
+                <div style="width: 80%; border-radius: 20px; 
+                border: 1px solid rgba(255, 255, 255, 0.248);
+                background-color: rgba(137, 194, 243, 0.065);">
+                    <div style="width: 100%; padding-left: 20px;">
+                        <br>
+                        <p class="midline">Recognition :</p>
+                        <center>
+                            <p class="headline" style="margin-left: -20px; font-size: 2em;">Certificate</p>
+                        </center>
+                        <!-- <p class="midline">Code in your favorite language :</p> -->
+                    </div>
+                    <br>
+                    <br>
+
+                </div>
+
+            </div>
+            <div style="width: 80%; height: 100px; text-align: center; padding-left: 20px; text-align: left;">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <span class="headline">Contact <br>Us...</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="language">
+                <div style="width: 80%; border-radius: 20px; 
+                border: 1px solid rgba(255, 255, 255, 0.248);
+                background-color: rgba(137, 194, 243, 0.065);">
+                    <div style="width: 100%;">
+                        <br>
+                        <center>
+                            <p class="headline" style="font-size: 2em;">Co-cordinator</p>
+                            <p class="midline">number_here</p>
+
+                        </center>
+                        <!-- <p class="midline">Code in your favorite language :</p> -->
+                    </div>
+                    <br>
+                    <br>
+
+                </div>
+
+            </div>
+            <div style="width: 80%; height: 100px; text-align: center; padding-left: 20px; text-align: left;">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <span class="headline">Competition <br>Location</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="language">
+                <div style="width: 80%; border-radius: 20px; 
+                border: 1px solid rgba(255, 255, 255, 0.248);
+                background-color: rgba(137, 194, 243, 0.065);">
+                    <div style="width: 100%;">
+                        <br>
+                        <center>
+                            <p class="headline">PGMCOE</p>
+                            <p class="midline">PGM College of Engineering, Wagholi - Pune 412207</p>
+
+                        </center>
+                        <!-- <p class="midline">Code in your favorite language :</p> -->
+                    </div>
+                    <br>
+                    <br>
+
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div style="width: 99%; 
+                height: 50px;
+                border-radius: 20px 20px 0px 0px; 
+                border: 1px solid rgba(255, 255, 255, 0.248);
+                border: 1px solid rgba(255, 255, 255, 0.248);
+                background-color: rgba(137, 194, 243, 0.065);
+                color: white;
+                font-size: 7px;
+                font-family: 'Courier New', Courier, monospace;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                ">
+                <center>
+                    <p>Developed, Deployed and Maintained</p>
+                    <a href="https://anodicpassion.pythonanywhere.com" target="_blank"
+                        style="text-decoration: none; color: rgb(35, 142, 235);">anodic_passion</a>
+                </center>
+
+            </div>
+
+        </div>
+    </div>
+    <div id='w' style="display: none;">
+        <canvas id="space" style="width: 100vw; height: 100vh;"></canvas>
+    </div>
+
+
+    <script>
+        //based on an Example by @curran
+window.requestAnimFrame = (function () { return window.requestAnimationFrame })();
+var canvas = document.getElementById("space");
+var c = canvas.getContext("2d");
+
+var numStars = 1900;
+var radius = '0.' + Math.floor(Math.random() * 9) + 1;
+var focalLength = canvas.width * 2;
+var warp = 0;
+var centerX, centerY;
+
+var stars = [], star;
+var i;
+
+var animate = true;
+
+initializeStars();
+
+function executeFrame() {
+
+    if (animate)
+        requestAnimFrame(executeFrame);
+    moveStars();
+    drawStars();
+}
+
+function initializeStars() {
+    centerX = canvas.width / 2;
+    centerY = canvas.height / 2;
+
+    stars = [];
+    for (i = 0; i < numStars; i++) {
+        star = {
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            z: Math.random() * canvas.width,
+            o: '0.' + Math.floor(Math.random() * 99) + 1
+        };
+        stars.push(star);
+    }
+}
+
+function moveStars() {
+    for (i = 0; i < numStars; i++) {
+        star = stars[i];
+        star.z--;
+
+        if (star.z <= 0) {
+            star.z = canvas.width;
+        }
+    }
+}
+
+function drawStars() {
+    var pixelX, pixelY, pixelRadius;
+
+    // Resize to the screen
+    if (canvas.width != window.innerWidth || canvas.width != window.innerWidth) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        initializeStars();
+    }
+    if (warp == 0) {
+        c.fillStyle = "rgba(0,10,20,1)";
+        c.fillRect(0, 0, canvas.width, canvas.height);
+    }
+    c.fillStyle = "rgba(209, 255, 255, " + radius + ")";
+    for (i = 0; i < numStars; i++) {
+        star = stars[i];
+
+        pixelX = (star.x - centerX) * (focalLength / star.z);
+        pixelX += centerX;
+        pixelY = (star.y - centerY) * (focalLength / star.z);
+        pixelY += centerY;
+        pixelRadius = 1 * (focalLength / star.z);
+
+        c.fillRect(pixelX, pixelY, pixelRadius, pixelRadius);
+        c.fillStyle = "rgba(209, 255, 255, " + star.o + ")";
+        //c.fill();
+    }
+}
+
+
+executeFrame();
+
+function clg_name(){
+    
+}
+
+function typeWriterEffect() {
+    const text = "Code-War";
+    const target = document.getElementById("type-write");
+    let index = 0;
+    let blinkCount = 0;
+
+    function blinkCursor(times, callback) {
+        let blinkInterval = setInterval(() => {
+            target.innerHTML = (target.innerHTML.endsWith("|") ? target.innerHTML.slice(0, -1) : target.innerHTML + "|");
+            blinkCount++;
+            if (blinkCount >= times * 2) {
+                clearInterval(blinkInterval);
+                callback();
+            }
+        }, 400);
+    }
+
+    function typeText() {
+        if (index < text.length) {
+            if(index == text.length-1){
+                target.innerHTML = text.slice(0, index + 1) + "";
+
+            }
+            else{
+                target.innerHTML = text.slice(0, index + 1) + "|";
+            }
+            index++;
+            setTimeout(typeText, 100);
+        } else {
+            blinkCount = 0;
+            removeCursor();
+            
+            
+            // blinkCursor(2, removeCursor);
+        }
+    }
+
+    function removeCursor() {
+        target.innerHTML = text;
+        setTimeout(function () {
+            
+            $("#clg_name").fadeIn();
+            $("#w").fadeIn(4000);
+
+        }, 200);
+        
+    }
+
+    blinkCursor(3, typeText);
+}
+
+function backgorund_blb_app(ini){
+    var i = ini; 
+    const increment_o = 0.05;
+    function inc_o () {
+        document.getElementById("splash").style.opacity = i;
+        i = i - increment_o
+        if (i > 1){
+            console.log(i)
+            setTimeout(inc_o, 20);
+        }
+        else{
+            document.getElementById("splash").style.display = "none";
+        }
+    }
+    inc_o();
+}
+
+window.addEventListener("load", function() {
+    this.setTimeout(function () {
+        backgorund_blb_app(1);
+        typeWriterEffect(); 
+    }, 100)
+    
+        
+        
+});
+
+// document.addEventListener("DOMContentLoaded", 
+//     function () {
+//         typeWriterEffect(); 
+        
+//         backgorund_blb_app(1);
+// });
+
+    </script>
+
+</body>
+
+</html>
