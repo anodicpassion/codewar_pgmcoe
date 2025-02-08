@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CODEXIST.dev</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="Join CODEXIST.dev's platform for developers to monetize their code by creating and selling software products, while also providing a platform for companies to hire productive and motivated developers. Get started today and unlock new opportunities for your coding skills and business growth.">
+
+    <link rel="Shortcut Icon" type="image/png" href="static/dev.png">
+
+    <link rel="preload" href="static/RobotoMono-Thin.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="static/RobotoMono-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="static/RobotoMono-Light.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="static/RobotoMono-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="static/RobotoMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="static/Comfortaa-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="static/Comfortaa-Light.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="static/Comfortaa-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="static/Comfortaa-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="static/insta.png" as="image">
+    <link rel="preload" href="static/disc.png" as="image">
+    <link rel="preload" href="static/mail.png" as="image">
+    <link rel="preload" href="static/linked.png" as="image">
+    <link rel="preload" href="static/piggy-bank.png" as="image">
+    <link rel="preload" href="static/moni.png" as="image">
+    <link rel="preload" href="static/idea.png" as="image">
+    <link rel="preload" href="static/stats.png" as="image">
+    <link rel="preload" href="static/rupee.png" as="image">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+
+        ::-webkit-scrollbar-thumb {
+            background: rgb(210, 210, 210, 0.5);
+            border: 1px solid rgba(150, 150, 150, 0.1);
+            border-radius: 30px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            border: 0px solid rgba(255, 255, 255, 0.8);
+            background-image: linear-gradient(45deg, var(--base) 25%, var(--complimentary2));
+            border-radius: 30px;
+        }
+    </style>
+
+    <style>
+        .nav-but {
+            color: black;
+            position: relative;
+            text-decoration: none;
+            padding: 1vw;
+            background-color: rgba(255, 255, 255, 0.13);
+            font-family: boldrobo;
+            border-radius: 10px;
+            font-family: mediumcom;
+            cursor: pointer;
+
+        }
+
+        .nav-but:hover {
+            box-shadow: 0 0 40px rgba(200, 200, 200, 0.6);
+            backdrop-filter: blur(30px);
+        }
+    </style>
+
+
+    <style>
+        @font-face {
+            font-family: 'thinrobo';
+            src: url('static/RobotoMono-Thin.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'regularrobo';
+            src: url('static/RobotoMono-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'boldrobo';
+            src: url('static/RobotoMono-Bold.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'mediumrobo';
+            src: url('static/RobotoMono-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'boldcom';
+            src: url('static/Comfortaa-Bold.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'lightcom';
+            src: url('static/Comfortaa-Light.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'mediumcom';
+            src: url('static/Comfortaa-Medium.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'regularcom';
+            src: url('static/Comfortaa-Regular.ttf') format('truetype');
+        }
+    </style>
+    <style>
+        :root {
+            --dark-color: hsl(var(--hue), 100%, 9%);
+            --light-color: hsl(var(--hue), 95%, 98%);
+            --base: hsl(var(--hue), 95%, 50%);
+            --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
+            --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
+
+            --font-family: "Poppins", system-ui;
+
+            --bg-gradient: linear-gradient(to bottom,
+                    hsl(var(--hue), 95%, 99%),
+                    hsl(var(--hue), 95%, 84%));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            max-width: 1920px;
+            min-height: 100vh;
+
+            overflow: clip;
+        }
+
+        .content-box {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.575);
+            border-radius: 10px;
+            -webkit-backdrop-filter: blur(30px);
+            border: 0px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            backdrop-filter: blur(90px);
+            padding: 35px 35px;
+            overflow-y: auto;
+            font-family: regularcom;
+            font-size: 20px;
+            
+        }
+
+        .orb-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        #title {
+            display: inline;
+            font-family: thinrobo;
+            font-size: 10vw;
+        }
+
+        .text-gradient {
+            display: inline;
+            font-family: boldrobo;
+            font-size: 2.5vw;
+            background-image: linear-gradient(45deg,
+                    var(--base) 25%,
+                    var(--complimentary2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+        }
+
+        #title {
+            font-size: 5vw;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="progress-bar" style="position: absolute; background: red; height: 3px; border-radius: 5px; display: none;">
+    </div>
+    <div id="com-name" style="width: 100vw; align-items: center; justify-content: center; height: 100vh; display: none;"
+        align="center">
+        <div
+            style="margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
+            <a style="text-decoration: none; color: black;">
+                <p id="title" style="cursor: pointer;">|</p>
+                <p class="text-gradient" style="cursor: pointer; ">.dev</p>
+            </a>
+        </div>
+    </div>
+    <div id="index-dash"
+        style="width: 100vw; padding: 40px; align-items: center; justify-content: center; height: 100vh; display: none;"
+        align="center">
+        <div id="nav-bar"
+            style="justify-content: center; align-items: center; text-align: center; font-family: boldrobo;">
+
+            <div style="justify-content: center; align-items: center; text-align: center;">
+                <a class="nav-but"
+                    style="background: linear-gradient(45deg,var(--base) 25%, var(--complimentary2)); color: white;"
+                    id="home">Home</a>
+                <a class="nav-but" id="search">Search</a>
+                <a class="nav-but" id="about">About</a>
+                <a class="nav-but" id="sign">Account</a>
+            </div>
+
+        </div>
+        <div style="height: 100%; width: 100%; padding-top: 30px; display: flex;">
+            <div class="content-box" id="cont-box" style="transform: scale(0.9);">
+
+                <style>
+                    .fet {
+
+                        max-height: 270px;
+                        min-height: 270px;
+                        height: 100%;
+                        width: 100%;
+                        color: black;
+                        position: relative;
+                        text-decoration: none;
+                        padding: 1vw;
+                        background-color: rgba(255, 255, 255, 0);
+                        font-family: boldrobo;
+                        border-radius: 10px;
+                        font-family: mediumcom;
+                        overflow: auto;
+                    }
+
+                    .fet:hover {
+                        border: 1px solid rgba(100, 100, 100, 0.3);
+                        box-shadow: 0 0 20px rgba(200, 200, 200, 0.6);
+                        backdrop-filter: blur(30px);
+                        background-color: rgba(255, 255, 255, 0.13);
+                    }
+
+                    .fet-cont {
+                        color: #000;
+                    }
+
+                    .inp {
+                        padding: 0 10px;
+                        height: 40px;
+                        font-family: thinrobo;
+                        font-size: 20px;
+                        border: 1px solid rgba(50, 50, 50, 0.1);
+                        border-radius: 8px;
+                        width: 30vw;
+                    }
+
+                    .inp-button {
+                        width: 30vw;
+                        padding: 0 10px;
+                        height: 40px;
+                        font-family: boldrobo;
+                        font-size: 20px;
+                        border: 0px solid rgba(100, 100, 100, 0.3);
+                        border-radius: 8px;
+                        background-image: linear-gradient(45deg, var(--base) 25%, var(--complimentary2));
+                        color: #fff;
+                    }
+
+                    .signup-btn {
+                        width: 450px;
+                        padding: 0 5px;
+                        height: 60px;
+                        font-family: lightcom;
+                        font-size: 15px;
+                        border: 1px solid rgba(100, 100, 100, 0.3);
+                        border-radius: 10px;
+                        cursor: pointer;
+                        background: rgb(255, 255, 255, 0.2);
+                        /* background-image: linear-gradient(45deg, var(&#45;&#45;base) 25%, var(&#45;&#45;complimentary2));  */
+                        color: #000;
+                        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+                    }
+
+                    .signup-btn:hover {
+                        border: 0px solid rgba(100, 100, 100, 0.3);
+                        background-image: linear-gradient(45deg,
+                                var(--base) 25%,
+                                var(--complimentary2));
+                        color: #fff;
+                    }
+                </style>
+                <style>
+                    /* Style for the dropdown */
+                    .dropdown {
+                        width: 405px;
+                        height: 100px;
+                        display: none;
+                        overflow: auto;
+                        background-color: rgba(200, 200, 200, 0.13);
+                        box-shadow: 0 0 40px rgba(200, 200, 200, 0.6);
+
+                    }
+
+                    .dropdown-item {
+                        padding: 10px;
+                        cursor: pointer;
+                    }
+                </style>
+                <div id="home-content" align="left">
+                    <p style="font-family: regularcom; font-size: 30px; color: rgb(150, 150, 150);">hey ! are you a
+                        <strong id="devloper" style="font-family: boldcom; color: #000;"> </strong> ?</p>
+                    <br>
+                    <p style="font-family: regularcom;">&nbsp;&nbsp;&nbsp;&nbsp; we can tell you know how to let your
+                        code earn for you!</p>
+                    <!--                    <p style="font-family: regularcom;">&nbsp;&nbsp;&nbsp;&nbsp;we can tell you know how to let your code earn for you! <label style="font-family: boldcom; font-size: 30px;"> know how </label> to let <label style="font-family: boldcom; font-size: 30px;"> your code earn </label>for<label style="font-family: boldcom; font-size: 30px;"> you! </label></p>-->
+                    <!--                    <br>-->
+                    <br>
+                    <p style="font-family: regularcom; font-size: 30px;  color: rgb(150, 150, 150);">hey ! are you a
+                        <strong id="cli" style="font-family: boldcom; color: #000;"> </strong> ?</p>
+                    <br>
+                    <p style="font-family: regularcom;">&nbsp;&nbsp;&nbsp;&nbsp; we provide skill ready and motivated
+                        developers to enhance your productivity!</p>
+                    <!--                    <p style="font-family: regularcom;">&nbsp;&nbsp;&nbsp;&nbsp;we provide<label style="font-family: boldcom; font-size: 30px;"> skill ready </label> and <label style="font-family: boldcom; font-size: 30px;"> motivated developers </label>to<label style="font-family: boldcom; font-size: 30px;"> enhance </label>your<label style="font-family: boldcom; font-size: 30px;"> productivity! </label></p>-->
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div style="overflow: auto;" align="center">
+                        <div
+                            style="width: 50%; float: left; font-family: mediumcom; font-size: 30px; border-right: 0px solid #ccc;">
+                            <img src="static/developer.png" width="100px"><br><label id="devloper-2"
+                                style="font-size: 15px; color: rgb(150, 150, 150);">Developers</label>
+                        </div>
+                        <div style="width: 50%; float: left; font-family: mediumcom; font-size: 30px;">
+                            <img src="static/client.png" width="100px"><br><label id="cli-2"
+                                style="font-size: 15px; color: rgb(150, 150, 150);">Patron</label>
+                        </div>
+                    </div>
+                    <div style="overflow: auto;" align="center">
+                        <div
+                            style="width: 50%; float: left; box-sizing: border-box; padding: 20px; border-right: 1px solid #ccc; border-bottom: 0px solid #ccc; overflow: clip; padding-right: 100px; padding-left: 100px; font-size: 17px; line-height: 1.9;">
+
+                            <p>This is a platform where you can improve your coding skills while working on live full
+                                stack projects.</p>
+                            <br>
+                            <p>The benefits of this approach to learning include the opportunity to apply coding
+                                concepts in a practical way. Work with other developers in a collaborative environment,
+                                and build a portfolio of real-world projects that can be used to demonstrate skills to
+                                potential employers. </p>
+                        </div>
+                        <div
+                            style="width: 50%; float: left; box-sizing: border-box; padding: 20px; overflow: clip; border-bottom: 0px solid #ccc;  padding-right: 100px; padding-left: 100px; font-size: 17px; line-height: 1.9;">
+                            <p>This platform provides an open-space to convert your intellectual idea into reality.</p>
+                            <br>
+                            <p>Platform typically provides access to the resources to the tools, and support needed to
+                                idea into tangible product, service. This could include access to funding, mentorship,
+                                technical expertise, project-management and more. Collaborate with like-minded
+                                individuals or teams on our platform.</p>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div style="overflow: auto; padding-right: 4%; padding-left: 4%;" align="center">
+                        <div style="width: 23%; float: left; font-family: mediumcom; font-size: 30px; padding: 20px;">
+                            <div class="fet">
+                                <br>
+                                <img src="static/rupee.png" width="70px">
+                                <br>
+                                <br>
+                                <p class="fet-cont" style="font-family: regularcom; font-size: 15px;">Monetise code,
+                                    learning programming principles.</p>
+                            </div>
+                        </div>
+                        <div style="width: 23%; float: left; font-family: mediumcom; font-size: 30px; padding: 20px;">
+                            <div class="fet">
+                                <br>
+                                <img src="static/stats.png" width="70px">
+                                <br>
+                                <br>
+                                <p class="fet-cont" style="font-family: regularcom; font-size: 15px;">Get your
+                                    full-fledged developer profile analytics.</p>
+                            </div>
+
+                        </div>
+                        <div style="width: 8%; float: left; padding: 1%;">
+
+                        </div>
+                        <div style="width: 23%; float: left; font-family: mediumcom; font-size: 30px; padding: 20px;">
+                            <div class="fet">
+                                <br>
+                                <img src="static/idea.png" width="70px">
+                                <br>
+                                <br>
+                                <p class="fet-cont" style="font-family: regularcom; font-size: 15px;">Get your ideas
+                                    converted into real world implementations.</p>
+                            </div>
+                        </div>
+                        <div style="width: 23%; float: left; font-family: mediumcom; font-size: 30px; padding: 20px;">
+                            <div class="fet">
+                                <br>
+                                <img src="static/piggy-bank.png" width="70px">
+                                <br>
+                                <br>
+                                <p class="fet-cont" style="font-family: regularcom; font-size: 15px;">Get your projects
+                                    done efficiently & pocket-friendly</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--                    Footer-->
+                    <div>
+                        <div style="overflow: auto;">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <div style="width: 20%; float: left; box-sizing: border-box; padding: 10px; border-top: 0px solid #ccc; overflow: clip; font-size: 20px;"
+                                align="center">
+                            </div>
+                            <div style="padding-top: 1px;width: 60%; float: left; box-sizing: border-box;  border-top: 0px solid #ccc; overflow: clip; background-image: linear-gradient(45deg, var(--base) 25%, var(--complimentary2));"
+                                align="center">
+                            </div>
+                            <div style="width: 20%; float: left; box-sizing: border-box; padding: 10px; border-top: 0px solid #ccc; overflow: clip; font-size: 20px;"
+                                align="center">
+                            </div>
+                        </div>
+                        <br>
+                        <div style="overflow: auto; font-size: 10px;">
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; border-right: 0px solid #ccc; overflow: clip; font-size: 15px;"
+                                align="left">
+                            </div>
+                            <div style="font-size: 13px; width: 15%; float: left; box-sizing: border-box; padding: 10px; overflow: clip; border-right: 0px solid #ccc; font-family: monospace; color: rgb(150, 150, 150);"
+                                align="left">
+                                <p>Careers</p><br>
+                                <p>Empowerment</p><br>
+                                <p>Community</p><br>
+                                <p>Contact</p><br>
+                                <p>Policy</p>
+                            </div>
+                            <div style="font-size: 13px; width: 15%; float: left; box-sizing: border-box; padding: 10px; border-right: 0px solid #ccc; overflow: clip; font-family: monospace; color: rgb(150, 150, 150);"
+                                align="left">
+                                <p>Security</p><br>
+                                <p>Team</p><br>
+                                <p>Costumers</p><br>
+                                <p>Partners</p><br>
+                                <p>System Stats</p><br>
+                            </div>
+                            <div style="width: 45%; float: left; box-sizing: border-box; padding: 10px; overflow: clip; font-size: 20px;"
+                                align="center">
+                            </div>
+                        </div>
+                        <div style="overflow: auto;">
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; border-right: 0px solid #ccc; overflow: clip; font-size: 12px;"
+                                align="left">
+                                <p>Pune, Maharashtra</p>
+                            </div>
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; overflow: clip; font-size: 20px; border-right: 0px solid #ccc;"
+                                align="center">
+                            </div>
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; border-right: 0px solid #ccc; overflow: clip; font-size: 20px;"
+                                align="center">
+                            </div>
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; overflow: clip; font-size: 20px;"
+                                align="center">
+                                <a href="mailto:codexist.dev"
+                                    style="text-decoration: none; color: black; display: inline; margin: 5px;"
+                                    target="_blank"> <img src="static/mail.png" width="25px"
+                                        style="display: inline;"></a>
+                                <a href="https://www.instagram.com/codexist.dev"
+                                    style="text-decoration: none; color: black; display: inline; margin: 5px;"
+                                    target="_blank"> <img src="static/insta.png" width="25px"
+                                        style="display: inline;"></a>
+                                <a href="https://discord.gg/tkffxrMZ6z"
+                                    style="text-decoration: none; color: black; display: inline; margin: 5px;"
+                                    target="_blank"> <img src="static/disc.png" width="25px"
+                                        style="display: inline;"></a>
+                                <a href="" style="text-decoration: none; color: black; display: inline; margin: 5px;"
+                                    target="_blank"> <img src="static/linked.png" width="25px"
+                                        style="display: inline;"></a>
+                            </div>
+                        </div>
+                        <p style="font-family: thinrobo; font-size: 12px;" align="center">Copyrights @ 2023 | All rights
+                            reserved | <a style="text-decoration: none;">Privacy Policy</a></p>
+                    </div>
+                </div>
+
+
+                <div id="sign-content" style="display: none;">
+
+                    <br>
+
+                    <div style="text-align: center;">
+                        <!-- <p style="font-family: boldcom; font-size: 35px; align-items: left; padding-left: 100px;">Login
+                            with your devID.</p> -->
+                        <p style="font-family: boldcom; font-size: 35px; align-items: left;">STAY TUNED</p>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div style="overflow: auto; display: flex;">
+                        <div style="width: 25%; float: left; font-family: mediumcom; font-size: 20px;">
+                        </div>
+                        <div style="width: 50%; float: left; font-family: mediumcom; font-size: 20px;">
+                            <!-- <label>Login to CODEXIST.dev</label> -->
+                            <label>We're making some major updates to our platform to enhance its functionality and make it even easier to use.
+                                We apologise for any inconvenience caused during this time.
+                            </label>
+                            <br>
+                            <br>
+                            <label>Thank you for your patience and understanding.</label>
+                        </div>
+                        <div style="width: 25%; float: left; font-family: mediumcom; font-size: 20px;">
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <!--                    Footer-->
+                    <div>
+                        <div style="overflow: auto;">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <div style="width: 20%; float: left; box-sizing: border-box; padding: 10px; border-top: 0px solid #ccc; overflow: clip; font-size: 20px;"
+                                align="center">
+                            </div>
+                            <div style="padding-top: 1px;width: 60%; float: left; box-sizing: border-box;  border-top: 0px solid #ccc; overflow: clip; background-image: linear-gradient(45deg, var(--base) 25%, var(--complimentary2));"
+                                align="center">
+                            </div>
+                            <div style="width: 20%; float: left; box-sizing: border-box; padding: 10px; border-top: 0px solid #ccc; overflow: clip; font-size: 20px;"
+                                align="center">
+                            </div>
+                        </div>
+                        <br>
+                        <div style="overflow: auto; font-size: 10px;">
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; border-right: 0px solid #ccc; overflow: clip; font-size: 15px;"
+                                align="left">
+                            </div>
+                            <div style="font-size: 13px; width: 15%; float: left; box-sizing: border-box; padding: 10px; overflow: clip; border-right: 0px solid #ccc; font-family: monospace; color: rgb(150, 150, 150);"
+                                align="left">
+                                <p>Careers</p><br>
+                                <p>Empowerment</p><br>
+                                <p>Community</p><br>
+                                <p>Contact</p><br>
+                                <p>Policy</p>
+                            </div>
+                            <div style="font-size: 13px; width: 15%; float: left; box-sizing: border-box; padding: 10px; border-right: 0px solid #ccc; overflow: clip; font-family: monospace; color: rgb(150, 150, 150);"
+                                align="left">
+                                <p>Security</p><br>
+                                <p>Team</p><br>
+                                <p>Costumers</p><br>
+                                <p>Partners</p><br>
+                                <p>System Stats</p><br>
+                            </div>
+                            <div style="width: 45%; float: left; box-sizing: border-box; padding: 10px; overflow: clip; font-size: 20px;"
+                                align="center">
+                            </div>
+                        </div>
+                        <div style="overflow: auto;">
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; border-right: 0px solid #ccc; overflow: clip; font-size: 12px;"
+                                align="left">
+                                <p>Pune, Maharashtra</p>
+                            </div>
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; overflow: clip; font-size: 20px; border-right: 0px solid #ccc;"
+                                align="center">
+                            </div>
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; border-right: 0px solid #ccc; overflow: clip; font-size: 20px;"
+                                align="center">
+                            </div>
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; overflow: clip; font-size: 20px;"
+                                align="center">
+                                <a href="mailto:codexist.dev"
+                                    style="text-decoration: none; color: black; display: inline; margin: 5px;"
+                                    target="_blank"> <img src="static/mail.png" width="25px"
+                                        style="display: inline;"></a>
+                                <a href="https://www.instagram.com/codexist.dev"
+                                    style="text-decoration: none; color: black; display: inline; margin: 5px;"
+                                    target="_blank"> <img src="static/insta.png" width="25px"
+                                        style="display: inline;"></a>
+                                <a href="https://discord.gg/tkffxrMZ6z"
+                                    style="text-decoration: none; color: black; display: inline; margin: 5px;"
+                                    target="_blank"> <img src="static/disc.png" width="25px"
+                                        style="display: inline;"></a>
+                                <a href="" style="text-decoration: none; color: black; display: inline; margin: 5px;"
+                                    target="_blank"> <img src="static/linked.png" width="25px"
+                                        style="display: inline;"></a>
+                            </div>
+                        </div>
+                        <p style="font-family: thinrobo; font-size: 12px;" align="center">Copyrights @ 2023 | All rights
+                            reserved | <a style="text-decoration: none;">Privacy Policy</a></p>
+                    </div>
+                </div>
+
+                <div id="about-content" style="display: none;">
+                    <p style="font-family: boldcom; font-size: 2vw;"></p>
+                    <br>
+                    <br>
+                    <div style="overflow: auto;">
+                        <div
+                            style="width: 50%; float: left; box-sizing: border-box; padding: 20px; border-right: 1px solid #ccc; overflow: clip;">
+                            <img src="static/insta.png" width="17px" style="display: inline;">
+                            <a href="https://www.instagram.com/codexist.dev"
+                                style="text-decoration: none; color: black; display: inline;"> Instagram</a>
+                        </div>
+                        <div style="width: 50%; float: left; box-sizing: border-box; padding: 20px; overflow: clip;">
+                            <img src="static/disc.png" width="20px" style="display: inline;">
+                            <a href="https://discord.gg/tkffxrMZ6z"
+                                style="text-decoration: none; color: black; display: inline;"> Discord</a>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <p style="font-family: regularcom;">&nbsp;&nbsp;&nbsp;&nbsp;We introduce our platform for developers
+                        and patrons around the world. The platform is designed to empower developers of all levels to
+                        easily create innovative and powerful applications and advance their skills according to their
+                        domain. Our platform will get your job done quickly and efficiently, providing you with a
+                        complete set of services to bring your ideas to life.</p>
+                    <br>
+                    <br>
+                    <p style="font-family: regularcom;">&nbsp;&nbsp;&nbsp;&nbsp;Our developer dashboard is equipped with
+                        a unique flow to create scalable and performance optimized applications. Whether you're building
+                        web applications, mobile apps, or integrations with existing systems, our platform has
+                        everything you need to succeed.</p>
+                    <br>
+                    <br>
+                    <p style="font-family: regularcom;">&nbsp;&nbsp;&nbsp;&nbsp;On the platform, patrons can post their
+                        own ideas or purchase one of existing projects. They can even hire top rated developers if they
+                        want. Our platform is designed to meet the needs of various industries and sectors including
+                        finance, healthcare, retail and education. Our platform offers a variety of resources and
+                        support to help you reach your goals.</p>
+                    <br>
+                    <br>
+                    <p style="font-family: regularcom;">&nbsp;&nbsp;&nbsp;&nbsp;Join thousands of developers who are
+                        already transforming their development experience on our platform. Try our developer platform
+                        today and see how it can help you bring your ideas to life and create innovative applications
+                        that make a difference.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <!--                    Footer-->
+                    <div>
+                        <div style="overflow: auto;">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <div style="width: 20%; float: left; box-sizing: border-box; padding: 10px; border-top: 0px solid #ccc; overflow: clip; font-size: 20px;"
+                                align="center">
+                            </div>
+                            <div style="padding-top: 1px;width: 60%; float: left; box-sizing: border-box;  border-top: 0px solid #ccc; overflow: clip; background-image: linear-gradient(45deg, var(--base) 25%, var(--complimentary2));"
+                                align="center">
+                            </div>
+                            <div style="width: 20%; float: left; box-sizing: border-box; padding: 10px; border-top: 0px solid #ccc; overflow: clip; font-size: 20px;"
+                                align="center">
+                            </div>
+                        </div>
+                        <br>
+                        <div style="overflow: auto; font-size: 10px;">
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; border-right: 0px solid #ccc; overflow: clip; font-size: 15px;"
+                                align="left">
+                            </div>
+                            <div style="font-size: 13px; width: 15%; float: left; box-sizing: border-box; padding: 10px; overflow: clip; border-right: 0px solid #ccc; font-family: monospace; color: rgb(150, 150, 150);"
+                                align="left">
+                                <p>Careers</p><br>
+                                <p>Empowerment</p><br>
+                                <p>Community</p><br>
+                                <p>Contact</p><br>
+                                <p>Policy</p>
+                            </div>
+                            <div style="font-size: 13px; width: 15%; float: left; box-sizing: border-box; padding: 10px; border-right: 0px solid #ccc; overflow: clip; font-family: monospace; color: rgb(150, 150, 150);"
+                                align="left">
+                                <p>Security</p><br>
+                                <p>Team</p><br>
+                                <p>Costumers</p><br>
+                                <p>Partners</p><br>
+                                <p>System Stats</p><br>
+                            </div>
+                            <div style="width: 45%; float: left; box-sizing: border-box; padding: 10px; overflow: clip; font-size: 20px;"
+                                align="center">
+                            </div>
+                        </div>
+                        <div style="overflow: auto;">
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; border-right: 0px solid #ccc; overflow: clip; font-size: 12px;"
+                                align="left">
+                                <p>Pune, Maharashtra</p>
+                            </div>
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; overflow: clip; font-size: 20px; border-right: 0px solid #ccc;"
+                                align="center">
+                            </div>
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; border-right: 0px solid #ccc; overflow: clip; font-size: 20px;"
+                                align="center">
+                            </div>
+                            <div style="width: 25%; float: left; box-sizing: border-box; padding: 10px; overflow: clip; font-size: 20px;"
+                                align="center">
+                                <a href="mailto:codexist.dev"
+                                    style="text-decoration: none; color: black; display: inline; margin: 5px;"
+                                    target="_blank"> <img src="static/mail.png" width="25px"
+                                        style="display: inline;"></a>
+                                <a href="https://www.instagram.com/codexist.dev"
+                                    style="text-decoration: none; color: black; display: inline; margin: 5px;"
+                                    target="_blank"> <img src="static/insta.png" width="25px"
+                                        style="display: inline;"></a>
+                                <a href="https://discord.gg/tkffxrMZ6z"
+                                    style="text-decoration: none; color: black; display: inline; margin: 5px;"
+                                    target="_blank"> <img src="static/disc.png" width="25px"
+                                        style="display: inline;"></a>
+                                <a href="" style="text-decoration: none; color: black; display: inline; margin: 5px;"
+                                    target="_blank"> <img src="static/linked.png" width="25px"
+                                        style="display: inline;"></a>
+                            </div>
+                        </div>
+                        <p style="font-family: thinrobo; font-size: 12px;" align="center">Copyrights @ 2023 | All rights
+                            reserved | <a style="text-decoration: none;">Privacy Policy</a></p>
+                    </div>
+                </div>
+
+                <!--            SEARCH-->
+                <div id="search-content" style="display: none;">
+                    <p style="font-family: boldcom; font-size: 2vw; display: inline;">Search: </p><input class="inp"
+                        placeholder="open projects" style="display: inline;">
+                </div>
+
+                <!--                DEV-REG-->
+                <div id="dev-reg" style="display: none">
+                    <div style="width: 50px; height:50px; cursor:pointer; position:absolute; font-size:20px; font-family: boldcom; "
+                        onclick="sign_page()">
+                        <p>
+                            <<span style="font-size:30px; position:absolute; margin-left:0px; margin-top:-12.5px;">
+                                .</span>
+                        </p>
+                    </div>
+
+                    <br>
+
+                    <div style="text-align: left;">
+                        <p style="font-family: boldcom; font-size: 35px; align-items: left; padding-left: 100px;">Create
+                            your devID.</p>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div style="overflow: auto;">
+
+                        <div style="width: 100%; float: left; font-family: mediumcom; font-size: 20px;">
+                            <label>Sign Up to CODEXIST.dev</label>
+                        </div>
+                    </div>
+                    <div id="ini-dev">
+
+                        <br>
+                        <input class="inp" id="fname" placeholder="First Name" type="text"
+                            style="display: inline; width: 200px;">
+                        <input class="inp" id="lname" placeholder="Last Name" type="text"
+                            style="display: inline; width: 200px;">
+                        <br>
+                        <br>
+                        <h5 style="margin-left: -360px; margin-top:10px; margin-bottom:10px;">Email</h5>
+                        <input class="inp" id="dev-mail" placeholder="Email" type="email"
+                            style="width:405px; margin-left:0px;">
+                        <br>
+                        <br>
+                        <h5 style="margin-left: -335px; margin-top:10px; margin-bottom:10px;">Country</h5>
+                        <input class="inp" type="text" id="countryInput" placeholder="Country"
+                            style="width:405px; margin-left:-4px;">
+                        <div class="dropdown" id="countryDropdown"></div>
+                        <br>
+                        <br>
+                        <h5 style="margin-left: -288px; margin-top:10px; margin-bottom:10px;">Date of Birth</h5>
+                        <input type="date" id="birthday" name="birthday"
+                            style="width:405px; margin-left:-7px; color: #000; padding: 0 10px; height: 40px; font-family: regularcom; font-size: 20px; border: 1px solid rgba(50, 50, 50, 0.1); border-radius: 8px;">
+                        <p style="font-size:10px;">(Just to confirm your age)</p>
+                        <br>
+                        <div id="log-dev" style="display:none;">
+                            <h5 style="margin-left: -360px; margin-top:10px; margin-bottom:10px;">devID</h5>
+                            <input class="inp" id="dev-id" placeholder="devID" type="text"
+                                style="width:405px; margin-left:0px;">
+                            <br>
+                            <br>
+                            <h5 style="margin-left: -320px; margin-top:10px; margin-bottom:10px;">Password</h5>
+                            <input class="inp" id="pass1" placeholder="********" type="password" minlength="8"
+                                style="width:405px; margin-left:0px;">
+                            <br>
+                            <br>
+                            <h5 style="margin-left: -260px; margin-top:10px; margin-bottom:10px;">Password again</h5>
+                            <input class="inp" id="pass2" placeholder="********" type="password" minlength="8"
+                                style="width:405px; margin-left:0px;">
+                            <br>
+                            <br>
+                        </div>
+
+                        <input class="inp-button" type="submit" id="cont-dev-sign" value="Continue"
+                            style="width:405px; margin-left:-7px; cursor: pointer;">
+                    </div>
+
+
+
+
+                </div>
+
+                <!--                COMP-REG-->
+                <div id="com-reg" style="display: none;">
+                    <div style="width: 50px; height:50px; cursor:pointer; position:absolute; font-size:20px; font-family: boldcom; "
+                        onclick="sign_page()">
+                        <p>
+                            <<span style="font-size:30px; position:absolute; margin-left:0px; margin-top:-12.5px;">
+                                .</span>
+                        </p>
+                    </div>
+
+                    <input class="inp" placeholder="reg" style="display: inline;">
+                </div>
+
+                <!--                LOGIN -->
+                <div id="log" style="display:none">
+                    <div style="width: 50px; height:50px; cursor:pointer; position:absolute; font-size:20px; font-family: boldcom; "
+                        onclick="sign_page()">
+                        <p>
+                            <<span style="font-size:30px; position:absolute; margin-left:0px; margin-top:-12.5px;">
+                                .</span>
+                        </p>
+                    </div>
+
+                    <br>
+                    <div style="text-align: left;">
+                        <p style="font-family: boldcom; font-size: 35px; align-items: left; padding-left: 100px;">Create
+                            your ID.</p>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div style="overflow: auto;">
+
+                        <div style="width: 100%; float: left; font-family: mediumcom; font-size: 20px;">
+                            <label>Sign Up to CODEXIST.dev</label>
+                        </div>
+                    </div>
+
+
+
+                    <div style="overflow: auto;">
+                        <!-- <div style="width: 50%; float: left; box-sizing: border-box; padding: 20px; border-right: 1px solid #ccc; overflow: clip;" align="left">
+                                            <form id="sig">
+                
+                                                <br>
+                                                <p style="font-family: 'Roboto Mono', monospace;" align="left">Username | Email: <label style="display: inline;font-family: thinrobo; color: red;"> * </label></p>
+                                                <br>
+                
+                                                <input id="username" maxlength="60" minlength="4" name="username" placeholder="user_name | em@il" required="" style="padding: 0 10px; height: 40px; font-family: thinrobo; font-size: 20px; border: 1px solid rgba(50, 50, 50, 0.1); border-radius: 8px; width: 25vw; margin-left: 30px;" type="text" value="">
+                
+                                                <br><br><p style="font-family: 'Roboto Mono', monospace;" align="left">Password: <label style="display: inline;font-family: thinrobo; color: red;"> * </label></p><br>
+                
+                                                <input id="password" maxlength="20" minlength="8" name="password" placeholder="********" required="" style="padding: 0 10px; height: 40px; font-family: thinrobo; font-size: 20px; border: 1px solid rgba(50, 50, 50, 0.1); border-radius: 8px; width: 25vw; margin-left: 30px;" type="password" value="">
+                
+                                                <br>
+                                                <br>
+                                                <label id="usr_err" style="display: inline;font-family: thinrobo; color: red;"></label>
+                                                <br>
+                                                <br>
+                
+                                                <input id="submit" name="submit" style="width: 25vw; padding: 0 10px; height: 40px; font-family: boldrobo; font-size: 20px; border: 0px solid rgba(100, 100, 100, 0.3); border-radius: 8px; cursor: pointer; margin-left: 30px;background-image: linear-gradient(45deg, var(--base) 25%, var(--complimentary2)); color: #fff;" type="submit" value="Login">
+                
+                                                <br>
+                                                <br>
+                                            </form>
+                                        </div> -->
+                        <div
+                            style="width: 100%; float: left; box-sizing: border-box; padding: 20px; border-right: 0px solid #ccc; overflow: clip;">
+                            <!-- <br>
+                                            <br> -->
+                            <br>
+                            <div class="signup-btn" style="overflow: clip; padding:13px;" onclick="dev_signup()">
+                                <!--                                <button onclick="cli_signup()" style="width:100%; color: rgba(0,0,0,0); height:100%;"></button>-->
+
+                                <div style="float: left; width: 100%;" align="center">
+                                    <a id="devloper-3" style="font-size: 25px; font-family: boldrobo;"></a>
+
+                                </div>
+                                <div style="margin-left:400px; position:absolute;" align="center">
+
+                                    <p style="font-size:30px;">></p>
+                                </div>
+                            </div>
+                            <!--                            <button onclick="dev_signup()"  class="signup-btn"><a id="devloper-3" style="font-size: 25px; font-family: boldrobo;"></a></button>-->
+                            <br>
+                            <br>
+                            <br>
+                            <div class="signup-btn" style="overflow: clip; padding:13px;" onclick="cli_signup()">
+                                <!--                                <button onclick="cli_signup()" style="width:100%; color: rgba(0,0,0,0); height:100%;"></button>-->
+
+                                <div style="float: left; width: 100%;" align="center">
+                                    <a id="cli-3" style="font-size: 25px; font-family: boldrobo;"></a>
+
+                                </div>
+                                <div style="margin-left:400px; position:absolute;" align="center">
+
+                                    <p style="font-size:30px;">></p>
+                                </div>
+                            </div>
+                            <!--                            <button onclick="cli_signup()" class="signup-btn"><p align="right" style="font-size: 20px;" > > </p><a id="cli-3" style="font-size: 25px; font-family: boldrobo;" property="absolute"></a></button>-->
+
+                        </div>
+
+                    </div>
+
+                    <br>
+                    <br>
+
+
+                </div>
+                <script>
+
+                    function sign_page() {
+
+                        document.getElementById("home-content").style.display = "none";
+
+                        var disab = document.getElementById("home");
+                        disab.style.background = "rgba(255, 255, 255, 0.13)";
+                        disab.style.color = "#000";
+
+                        var disab = document.getElementById("about");
+                        disab.style.background = "rgba(255, 255, 255, 0.13)";
+                        disab.style.color = "#000";
+
+                        var disab = document.getElementById("search");
+                        disab.style.background = "rgba(255, 255, 255, 0.13)";
+                        disab.style.color = "#000";
+
+                        var enab = document.getElementById("sign");
+                        enab.style.background = "linear-gradient(45deg,var(--base) 25%, var(--complimentary2))";
+                        enab.style.color = "#fff";
+
+
+                        document.getElementById("home-content").style.display = "none";
+                        document.getElementById("about-content").style.display = "none";
+                        document.getElementById("search-content").style.display = "none";
+                        document.getElementById("dev-reg").style.display = "none";
+                        document.getElementById("com-reg").style.display = "none";
+                        document.getElementById("log").style.display = "none";
+
+                        $("#sign-content").fadeIn();
+
+                    }
+
+                    function home_page() {
+
+                        var div = document.getElementById("cont-box");
+                        div.style.width = "100%";
+
+                        var disab = document.getElementById("sign");
+                        disab.style.background = "rgba(255, 255, 255, 0.13)";
+                        disab.style.color = "#000";
+
+                        var disab = document.getElementById("about");
+                        disab.style.background = "rgba(255, 255, 255, 0.13)";
+                        disab.style.color = "#000";
+
+                        var disab = document.getElementById("search");
+                        disab.style.background = "rgba(255, 255, 255, 0.13)";
+                        disab.style.color = "#000";
+
+                        var enab = document.getElementById("home");
+                        enab.style.background = "linear-gradient(45deg,var(--base) 25%, var(--complimentary2))";
+                        enab.style.color = "#fff";
+
+
+                        document.getElementById("sign-content").style.display = "none";
+                        document.getElementById("search-content").style.display = "none";
+                        document.getElementById("about-content").style.display = "none";
+                        document.getElementById("dev-reg").style.display = "none";
+                        document.getElementById("com-reg").style.display = "none";
+                        document.getElementById("log").style.display = "none";
+
+                        $("#home-content").fadeIn();
+                    }
+
+                    function about_page() {
+
+                        var div = document.getElementById("cont-box");
+                        div.style.width = "100%";
+
+                        var disab = document.getElementById("sign");
+                        disab.style.background = "rgba(255, 255, 255, 0.13)";
+                        disab.style.color = "#000";
+
+                        var disab = document.getElementById("home");
+                        disab.style.background = "rgba(255, 255, 255, 0.13)";
+                        disab.style.color = "#000";
+
+                        var disab = document.getElementById("search");
+                        disab.style.background = "rgba(255, 255, 255, 0.13)";
+                        disab.style.color = "#000";
+
+
+                        var enab = document.getElementById("about");
+                        enab.style.background = "linear-gradient(45deg,var(--base) 25%, var(--complimentary2))";
+                        enab.style.color = "#fff";
+
+
+                        document.getElementById("sign-content").style.display = "none";
+                        document.getElementById("home-content").style.display = "none";
+                        document.getElementById("search-content").style.display = "none";
+                        document.getElementById("dev-reg").style.display = "none";
+                        document.getElementById("com-reg").style.display = "none";
+                        document.getElementById("log").style.display = "none";
+                        $("#about-content").fadeIn();
+
+                    }
+
+                    function search_page() {
+
+                        var div = document.getElementById("cont-box");
+                        div.style.width = "100%";
+
+                        var disab = document.getElementById("sign");
+                        disab.style.background = "rgba(255, 255, 255, 0.13)";
+                        disab.style.color = "#000";
+
+                        var disab = document.getElementById("home");
+                        disab.style.background = "rgba(255, 255, 255, 0.13)";
+                        disab.style.color = "#000";
+
+                        var disab = document.getElementById("about");
+                        disab.style.background = "rgba(255, 255, 255, 0.13)";
+                        disab.style.color = "#000";
+
+
+                        var enab = document.getElementById("search");
+                        enab.style.background = "linear-gradient(45deg,var(--base) 25%, var(--complimentary2))";
+                        enab.style.color = "#fff";
+
+
+                        document.getElementById("sign-content").style.display = "none";
+                        document.getElementById("about-content").style.display = "none";
+                        document.getElementById("home-content").style.display = "none";
+                        document.getElementById("dev-reg").style.display = "none";
+                        document.getElementById("com-reg").style.display = "none";
+                        document.getElementById("log").style.display = "none";
+                        $("#search-content").fadeIn();
+                    }
+
+                    document.getElementById("sign").addEventListener("click", sign_page);
+                    document.getElementById("home").addEventListener("click", home_page);
+                    document.getElementById("about").addEventListener("click", about_page);
+                    document.getElementById("search").addEventListener("click", search_page);
+
+                </script>
+                <script>
+                    function typew() {
+                        var j = 0;
+                        var i = 0;
+                        <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+                        const programmer = ["|", "|", "P|", "Pr|", "Pro|", "Prog|", "Progr|", "Progra|", "Program|", "Programm|", "Programme|", "Programmer", "Programmer", "Programmer"];
+                        const developer = ["|", "|", "D|", "De|", "Dev|", "Deve|", "Devel|", "Develo|", "Develop|", "Develope|", "Developer"];
+                        const freelancer = ["|", "|", "F|", "Fr|", "Fre|", "Free|", "Freel|", "Freela|", "Freelan|", "Freelanc|", "Freelance|", "Freelancer", "Freelancer"];
+                        const engineer = ["|", "|", "E|", "En|", "Eng|", "Engi|", "Engin|", "Engine|", "Enginee|", "Engineer"];
+                        const curious = ["|", "|", "C|", "Cu|", "Cur|", "Curi|", "Curio|", "Curiou|", "Curious", "Curious", "Curious"];
+                        const scripter = ["|", "|", "S|", "Sc|", "Scr|", "Scri|", "Scrip|", "Script|", "Scripte|", "Scripter"];
+                        const designer = ["|", "|", "D|", "De|", "Des|", "Desi|", "Desig|", "Design|", "Designe|", "Designer", "Designer", "Designer"];
+                        const creative = ["|", "|", "C|", "Cr|", "Cre|", "Crea|", "Creat|", "Creati|", "Creativ|", "Creative", "Creative", "Creative", "Creative"];
+                        const learner = ["|", "|", "L|", "Le|", "Lea|", "Lear", "Learn|", "Learne|", "Learner", "Learner", "Learner", "Learner"];
+
+                        const entrepreneur = ["|", "|", "E|", "En|", "Ent|", "Entr|", "Entre|", "Entrep|", "Entrepr|", "Entrepre|", "Entrepren|", "Entrepren|", "Entrepreneu|", "Entrepreneur"];
+                        const recruiter = ["|", "|", "R|", "Re|", "Rec|", "Recr|", "Recru|", "Recrui|", "Recruit|", "Recruite|", "Recruiter"];
+                        const businessman = ["|", "|", "B|", "Bu|", "Bus|", "Busi|", "Busin|", "Busine|", "Busines|", "Business|", "Businessm|", "Businessma|", "Businessman"];
+                        const employer = ["|", "|", "E|", "Em|", "Emp|", "Empl|", "Emplo|", "Employ|", "Employe|", "Employer"];
+                        const visionist = ["|", "|", "V|", "Vi|", "Vis|", "Visi|", "Visio|", "Vision|", "Visioni|", "Visionis|", "Visionist"];
+                        const leader = ["|", "|", "L|", "Le|", "Lea|", "Lead|", "Leade|", "Leader", "Leader", "Leader"];
+                        const influencer = ["|", "|", "I|", "In|", "Inf|", "Infl|", "Influ|", "Influe|", "Influen|", "Influenc|", "Influence|", "Influencer"];
+                        const idea_seeker = ["|", "|", "I|", "Id|", "Ide|", "Idea|", "Idea-|", "Idea-S|", "Idea-Se|", "Idea-See|", "Idea-Seek|", "Idea-Seeke|", "Idea-Seeker"];
+                        const benefactor = ["|", "|", "B|", "Be|", "Ben|", "Bene|", "Benef|", "Benefa|", "Benefac|", "Benefact|", "Benefacto|", "Benefactor"];
+
+                        var speed_2 = 50;
+
+                        function cli_9_e() {
+
+                            if (j > 0) {
+                                document.getElementById("cli").innerHTML = benefactor[j];
+                                document.getElementById("cli-2").innerHTML = benefactor[j];
+                                document.getElementById("cli-3").innerHTML = benefactor[j];
+                                j--;
+                                setTimeout(cli_9_e, speed_2);
+                            }
+                            else {
+                                j = 0;
+                                setTimeout(cli_1, 200);
+                            }
+                        }
+
+                        function cli_9() {
+                            if (j < 12) {
+                                document.getElementById("cli").innerHTML = benefactor[j];
+                                document.getElementById("cli-2").innerHTML = benefactor[j];
+                                document.getElementById("cli-3").innerHTML = benefactor[j];
+                                j++;
+                                setTimeout(cli_9, speed_2);
+                            }
+                            else {
+                                j = j - 1;
+                                setTimeout(cli_9_e, 1000);
+                            }
+                        }
+
+                        function cli_8_e() {
+
+                            if (j > 0) {
+                                document.getElementById("cli").innerHTML = idea_seeker[j];
+                                document.getElementById("cli-2").innerHTML = idea_seeker[j];
+                                document.getElementById("cli-3").innerHTML = idea_seeker[j];
+                                j--;
+                                setTimeout(cli_8_e, speed_2);
+                            }
+                            else {
+                                j = 0;
+                                setTimeout(cli_9, 200);
+                            }
+                        }
+
+                        function cli_8() {
+                            if (j < 13) {
+                                document.getElementById("cli").innerHTML = idea_seeker[j];
+                                document.getElementById("cli-2").innerHTML = idea_seeker[j];
+                                document.getElementById("cli-3").innerHTML = idea_seeker[j];
+                                j++;
+                                setTimeout(cli_8, speed_2);
+                            }
+                            else {
+                                j = j - 1;
+                                setTimeout(cli_8_e, 1000);
+                            }
+                        }
+
+                        function cli_7_e() {
+
+                            if (j > 0) {
+                                document.getElementById("cli").innerHTML = influencer[j];
+                                document.getElementById("cli-2").innerHTML = influencer[j];
+                                document.getElementById("cli-3").innerHTML = influencer[j];
+                                j--;
+                                setTimeout(cli_7_e, speed_2);
+                            }
+                            else {
+                                j = 0;
+                                setTimeout(cli_8, 200);
+                            }
+                        }
+
+                        function cli_7() {
+                            if (j < 12) {
+                                document.getElementById("cli").innerHTML = influencer[j];
+                                document.getElementById("cli-2").innerHTML = influencer[j];
+                                document.getElementById("cli-3").innerHTML = influencer[j];
+                                j++;
+                                setTimeout(cli_7, speed_2);
+                            }
+                            else {
+                                j = j - 1;
+                                setTimeout(cli_7_e, 1000);
+                            }
+                        }
+
+                        function cli_6_e() {
+
+                            if (j > 0) {
+                                document.getElementById("cli").innerHTML = leader[j];
+                                document.getElementById("cli-2").innerHTML = leader[j];
+                                document.getElementById("cli-3").innerHTML = leader[j];
+                                j--;
+                                setTimeout(cli_6_e, speed_2);
+                            }
+                            else {
+                                j = 0;
+                                setTimeout(cli_7, 200);
+                            }
+                        }
+
+                        function cli_6() {
+                            if (j < 10) {
+                                document.getElementById("cli").innerHTML = leader[j];
+                                document.getElementById("cli-2").innerHTML = leader[j];
+                                document.getElementById("cli-3").innerHTML = leader[j];
+                                j++;
+                                setTimeout(cli_6, speed_2);
+                            }
+                            else {
+                                j = j - 1;
+                                setTimeout(cli_6_e, 1000);
+                            }
+                        }
+
+                        function cli_5_e() {
+
+                            if (j > 0) {
+                                document.getElementById("cli").innerHTML = visionist[j];
+                                document.getElementById("cli-2").innerHTML = visionist[j];
+                                document.getElementById("cli-3").innerHTML = visionist[j];
+                                j--;
+                                setTimeout(cli_5_e, speed_2);
+                            }
+                            else {
+                                j = 0;
+                                setTimeout(cli_6, 200);
+                            }
+                        }
+
+                        function cli_5() {
+                            if (j < 11) {
+                                document.getElementById("cli").innerHTML = visionist[j];
+                                document.getElementById("cli-2").innerHTML = visionist[j];
+                                document.getElementById("cli-3").innerHTML = visionist[j];
+                                j++;
+                                setTimeout(cli_5, speed_2);
+                            }
+                            else {
+                                j = j - 1;
+                                setTimeout(cli_5_e, 1000);
+                            }
+                        }
+
+                        function cli_4_e() {
+
+                            if (j > 0) {
+                                document.getElementById("cli").innerHTML = employer[j];
+                                document.getElementById("cli-2").innerHTML = employer[j];
+                                document.getElementById("cli-3").innerHTML = employer[j];
+                                j--;
+                                setTimeout(cli_4_e, speed_2);
+                            }
+                            else {
+                                j = 0;
+                                setTimeout(cli_5, 200);
+                            }
+                        }
+
+                        function cli_4() {
+                            if (j < 10) {
+                                document.getElementById("cli").innerHTML = employer[j];
+                                document.getElementById("cli-2").innerHTML = employer[j];
+                                document.getElementById("cli-3").innerHTML = employer[j];
+                                j++;
+                                setTimeout(cli_4, speed_2);
+                            }
+                            else {
+                                j = j - 1;
+                                setTimeout(cli_4_e, 1000);
+                            }
+                        }
+
+
+
+                        function cli_3_e() {
+
+                            if (j > 0) {
+                                document.getElementById("cli").innerHTML = businessman[j];
+                                document.getElementById("cli-2").innerHTML = businessman[j];
+                                document.getElementById("cli-3").innerHTML = businessman[j];
+                                j--;
+                                setTimeout(cli_3_e, speed_2);
+                            }
+                            else {
+                                j = 0;
+                                setTimeout(cli_4, 200);
+                            }
+                        }
+
+                        function cli_3() {
+                            if (j < 13) {
+                                document.getElementById("cli").innerHTML = businessman[j];
+                                document.getElementById("cli-2").innerHTML = businessman[j];
+                                document.getElementById("cli-3").innerHTML = businessman[j];
+                                j++;
+                                setTimeout(cli_3, speed_2);
+                            }
+                            else {
+                                j = j - 1;
+                                setTimeout(cli_3_e, 1000);
+                            }
+                        }
+
+                        function cli_2_e() {
+
+
+                            if (j > 0) {
+                                document.getElementById("cli").innerHTML = recruiter[j];
+                                document.getElementById("cli-2").innerHTML = recruiter[j];
+                                document.getElementById("cli-3").innerHTML = recruiter[j];
+                                j--;
+                                setTimeout(cli_2_e, speed_2);
+                            }
+                            else {
+                                j = 0;
+                                setTimeout(cli_3, 200);
+                            }
+                        }
+                        function cli_2() {
+                            if (j < 11) {
+                                document.getElementById("cli").innerHTML = recruiter[j];
+                                document.getElementById("cli-2").innerHTML = recruiter[j];
+                                document.getElementById("cli-3").innerHTML = recruiter[j];
+                                j++;
+                                setTimeout(cli_2, speed_2);
+                            }
+                            else {
+                                j = j - 1;
+                                setTimeout(cli_2_e, 1000);
+                            }
+                        }
+
+                        function cli_1_e() {
+
+
+
+                            if (j > 0) {
+                                document.getElementById("cli").innerHTML = entrepreneur[j];
+                                document.getElementById("cli-2").innerHTML = entrepreneur[j];
+                                document.getElementById("cli-3").innerHTML = entrepreneur[j];
+                                j--;
+                                setTimeout(cli_1_e, speed_2);
+                            }
+                            else {
+                                j = 0;
+                                setTimeout(cli_2, 200);
+                            }
+                        }
+
+                        function cli_1() {
+                            if (j < 14) {
+                                document.getElementById("cli").innerHTML = entrepreneur[j];
+                                document.getElementById("cli-2").innerHTML = entrepreneur[j];
+                                document.getElementById("cli-3").innerHTML = entrepreneur[j];
+                                j++;
+                                setTimeout(cli_1, speed_2);
+                            }
+                            else {
+                                j = j - 1;
+                                setTimeout(cli_1_e, 1000);
+                            }
+                        }
+
+
+                        // <!---->
+
+                        function dev_9_e() {
+
+                            if (i > 0) {
+                                document.getElementById("devloper").innerHTML = learner[i];
+                                document.getElementById("devloper-2").innerHTML = learner[i];
+                                document.getElementById("devloper-3").innerHTML = learner[i];
+                                i--;
+                                setTimeout(dev_9_e, speed_2);
+                            }
+                            else {
+                                i = 0;
+                                setTimeout(dev_1, 200);
+                            }
+                        }
+
+                        function dev_9() {
+                            if (i < 12) {
+                                document.getElementById("devloper").innerHTML = learner[i];
+                                document.getElementById("devloper-2").innerHTML = learner[i];
+                                document.getElementById("devloper-3").innerHTML = learner[i];
+                                i++;
+                                setTimeout(dev_9, speed_2);
+                            }
+                            else {
+                                i = i - 1;
+                                setTimeout(dev_9_e, 1000);
+                            }
+                        }
+
+                        function dev_8_e() {
+
+                            if (i > 0) {
+                                document.getElementById("devloper").innerHTML = creative[i];
+                                document.getElementById("devloper-2").innerHTML = creative[i];
+                                document.getElementById("devloper-3").innerHTML = creative[i];
+                                i--;
+                                setTimeout(dev_8_e, speed_2);
+                            }
+                            else {
+                                i = 0;
+                                setTimeout(dev_9, 200);
+                            }
+                        }
+
+                        function dev_8() {
+                            if (i < 13) {
+                                document.getElementById("devloper").innerHTML = creative[i];
+                                document.getElementById("devloper-2").innerHTML = creative[i];
+                                document.getElementById("devloper-3").innerHTML = creative[i];
+                                i++;
+                                setTimeout(dev_8, speed_2);
+                            }
+                            else {
+                                i = i - 1;
+                                setTimeout(dev_8_e, 1000);
+                            }
+                        }
+
+
+                        function dev_7_e() {
+
+                            if (i > 0) {
+                                document.getElementById("devloper").innerHTML = designer[i];
+                                document.getElementById("devloper-2").innerHTML = designer[i];
+                                document.getElementById("devloper-3").innerHTML = designer[i];
+                                i--;
+                                setTimeout(dev_7_e, speed_2);
+                            }
+                            else {
+                                i = 0;
+                                setTimeout(dev_8, 200);
+                            }
+                        }
+
+                        function dev_7() {
+                            if (i < 12) {
+                                document.getElementById("devloper").innerHTML = designer[i];
+                                document.getElementById("devloper-2").innerHTML = designer[i];
+                                document.getElementById("devloper-3").innerHTML = designer[i];
+                                i++;
+                                setTimeout(dev_7, speed_2);
+                            }
+                            else {
+                                i = i - 1;
+                                setTimeout(dev_7_e, 1000);
+                            }
+                        }
+
+                        function dev_6_e() {
+
+                            if (i > 0) {
+                                document.getElementById("devloper").innerHTML = scripter[i];
+                                document.getElementById("devloper-2").innerHTML = scripter[i];
+                                document.getElementById("devloper-3").innerHTML = scripter[i];
+                                i--;
+                                setTimeout(dev_6_e, speed_2);
+                            }
+                            else {
+                                i = 0;
+                                setTimeout(dev_7, 200);
+                            }
+                        }
+
+                        function dev_6() {
+                            if (i < 10) {
+                                document.getElementById("devloper").innerHTML = scripter[i];
+                                document.getElementById("devloper-2").innerHTML = scripter[i];
+                                document.getElementById("devloper-3").innerHTML = scripter[i];
+                                i++;
+                                setTimeout(dev_6, speed_2);
+                            }
+                            else {
+                                i = i - 1;
+                                setTimeout(dev_6_e, 1000);
+                            }
+                        }
+
+
+                        function dev_5_e() {
+
+                            if (i > 0) {
+                                document.getElementById("devloper").innerHTML = curious[i];
+                                document.getElementById("devloper-2").innerHTML = curious[i];
+                                document.getElementById("devloper-3").innerHTML = curious[i];
+                                i--;
+                                setTimeout(dev_5_e, speed_2);
+                            }
+                            else {
+                                i = 0;
+                                setTimeout(dev_6, 200);
+                            }
+                        }
+
+                        function dev_5() {
+                            if (i < 11) {
+                                document.getElementById("devloper").innerHTML = curious[i];
+                                document.getElementById("devloper-2").innerHTML = curious[i];
+                                document.getElementById("devloper-3").innerHTML = curious[i];
+                                i++;
+                                setTimeout(dev_5, speed_2);
+                            }
+                            else {
+                                i = i - 1;
+                                setTimeout(dev_5_e, 1000);
+                            }
+                        }
+
+                        function dev_4_e() {
+
+                            if (i > 0) {
+                                document.getElementById("devloper").innerHTML = engineer[i];
+                                document.getElementById("devloper-2").innerHTML = engineer[i];
+                                document.getElementById("devloper-3").innerHTML = engineer[i];
+                                i--;
+                                setTimeout(dev_4_e, speed_2);
+                            }
+                            else {
+                                i = 0;
+                                setTimeout(dev_5, 200);
+                            }
+                        }
+
+                        function dev_4() {
+                            if (i < 10) {
+                                document.getElementById("devloper").innerHTML = engineer[i];
+                                document.getElementById("devloper-2").innerHTML = engineer[i];
+                                document.getElementById("devloper-3").innerHTML = engineer[i];
+                                i++;
+                                setTimeout(dev_4, speed_2);
+                            }
+                            else {
+                                i = i - 1;
+                                setTimeout(dev_4_e, 1000);
+                            }
+                        }
+
+                        function dev_3_e() {
+
+                            if (i > 0) {
+                                document.getElementById("devloper").innerHTML = freelancer[i];
+                                document.getElementById("devloper-2").innerHTML = freelancer[i];
+                                document.getElementById("devloper-3").innerHTML = freelancer[i];
+                                i--;
+                                setTimeout(dev_3_e, speed_2);
+                            }
+                            else {
+                                i = 0;
+                                setTimeout(dev_4, 200);
+                            }
+                        }
+
+                        function dev_3() {
+                            if (i < 13) {
+                                document.getElementById("devloper").innerHTML = freelancer[i];
+                                document.getElementById("devloper-2").innerHTML = freelancer[i];
+                                document.getElementById("devloper-3").innerHTML = freelancer[i];
+                                i++;
+                                setTimeout(dev_3, speed_2);
+                            }
+                            else {
+                                i = i - 1;
+                                setTimeout(dev_3_e, 1000);
+                            }
+                        }
+
+                        function dev_2_e() {
+
+
+                            if (i > 0) {
+                                document.getElementById("devloper").innerHTML = developer[i];
+                                document.getElementById("devloper-2").innerHTML = developer[i];
+                                document.getElementById("devloper-3").innerHTML = developer[i];
+                                i--;
+                                setTimeout(dev_2_e, speed_2);
+                            }
+                            else {
+                                i = 0;
+                                setTimeout(dev_3, 200);
+                            }
+                        }
+                        function dev_2() {
+                            if (i < 11) {
+                                document.getElementById("devloper").innerHTML = developer[i];
+                                document.getElementById("devloper-2").innerHTML = developer[i];
+                                document.getElementById("devloper-3").innerHTML = developer[i];
+                                i++;
+                                setTimeout(dev_2, speed_2);
+                            }
+                            else {
+                                i = i - 1;
+                                setTimeout(dev_2_e, 1000);
+                            }
+                        }
+
+                        function dev_1_e() {
+
+
+
+                            if (i > 0) {
+                                document.getElementById("devloper").innerHTML = programmer[i];
+                                document.getElementById("devloper-2").innerHTML = programmer[i];
+                                document.getElementById("devloper-3").innerHTML = programmer[i];
+                                i--;
+                                setTimeout(dev_1_e, speed_2);
+                            }
+                            else {
+                                i = 0;
+                                setTimeout(dev_2, 200);
+                            }
+                        }
+
+                        function dev_1() {
+                            if (i < 14) {
+                                document.getElementById("devloper").innerHTML = programmer[i];
+                                document.getElementById("devloper-2").innerHTML = programmer[i];
+                                document.getElementById("devloper-3").innerHTML = programmer[i];
+                                i++;
+                                setTimeout(dev_1, speed_2);
+                            }
+                            else {
+                                i = i - 1;
+                                setTimeout(dev_1_e, 1000);
+                            }
+                        }
+
+                        setTimeout(dev_1, 1500);
+                        setTimeout(cli_1, 1500);
+                    }
+
+                    typew();
+
+                </script>
+
+
+                <script>
+                    // List of countries
+                    const countries = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', "Côte d'Ivoire", 'Cabo Verde', 'Cambodia', 'Cameroon', 'Canada', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo (Congo-Brazzaville)', 'Costa Rica', 'Croatia', 'Cuba', 'Cyprus', 'Czechia (Czech Republic)', 'Democratic Republic of the Congo', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini (fmr. "Swaziland")', 'Ethiopia', 'Fiji', 'Finland', 'France', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana', 'Haiti', 'Holy See', 'Honduras', 'Hungary', 'Iceland', 'Bharat | India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jordan', 'Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Mauritania', 'Mauritius', 'Mexico', 'Micronesia', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar (formerly Burma)', 'Namibia', 'Nauru', 'Nepal', 'Netherlands', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'North Macedonia', 'Norway', 'Oman', 'Pakistan', 'Palau', 'Palestine State', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Qatar', 'Romania', 'Russia', 'Rwanda', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa', 'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'South Korea', 'South Sudan', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria', 'Tajikistan', 'Tanzania', 'Thailand', 'Timor-Leste', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Tuvalu', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States of America', 'Uruguay', 'Uzbekistan', 'Vanuatu', 'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe'];
+
+                    const countryInput = document.getElementById("countryInput");
+                    const countryDropdown = document.getElementById("countryDropdown");
+
+                    // Function to show the dropdown when typing
+                    countryInput.addEventListener("input", function () {
+                        const searchQuery = countryInput.value.toLowerCase();
+                        countryDropdown.innerHTML = "";
+
+                        if (searchQuery.trim() === "") {
+                            countryDropdown.style.display = "none";
+                            return;
+                        }
+
+                        const matchingCountries = countries.filter(country =>
+                            country.toLowerCase().includes(searchQuery)
+                        );
+
+                        matchingCountries.forEach(country => {
+                            const item = document.createElement("div");
+                            item.classList.add("dropdown-item");
+                            item.textContent = country;
+                            item.addEventListener("click", () => {
+                                countryInput.value = country;
+                                countryDropdown.style.display = "none";
+                            });
+                            countryDropdown.appendChild(item);
+                        });
+
+                        if (matchingCountries.length > 0) {
+                            countryDropdown.style.display = "block";
+                        } else {
+                            countryDropdown.style.display = "none";
+                        }
+                    });
+
+                    // Close the dropdown when clicking outside of it
+                    document.addEventListener("click", function (event) {
+                        if (!countryDropdown.contains(event.target)) {
+                            countryDropdown.style.display = "none";
+                        }
+                    });
+                </script>
+
+                <script>
+                    function validateEmail(email) {
+                        // Regular expression for a basic email validation
+                        const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+                        return regex.test(email);
+                    }
+
+                    function cont_dev_sign() {
+                        console.log(countries.includes(document.getElementById("countryInput")));
+                        if (document.getElementById("fname").value.length > 0 && document.getElementById("lname").value.length > 0 && validateEmail(document.getElementById("dev-mail").value) && countries.includes(document.getElementById("countryInput").value) && document.getElementById("birthday").value.length > 0 && document.getElementById("cont-dev-sign").value == "Continue") {
+                            console.log("continuing");
+                            dob = document.getElementById("birthday").value;
+                            console.log(dob);
+                            $("#log-dev").fadeIn();
+                            document.getElementById("cont-dev-sign").value = "Enter CODEXIST.dev";
+                        }
+                        if (document.getElementById("fname").value.length > 0 && document.getElementById("lname").value.length > 0 && validateEmail(document.getElementById("dev-mail").value) && countries.includes(document.getElementById("countryInput").value) && document.getElementById("birthday").value.length > 0 && document.getElementById("cont-dev-sign").value == "Enter CODEXIST.dev" && document.getElementById("pass1").value == document.getElementById("pass2").value && document.getElementById("pass1").value.length > 7 && document.getElementById("pass2").value.length > 7) {
+                            console.log("logging");
+                        }
+                    }
+                    document.getElementById("cont-dev-sign").addEventListener("click", cont_dev_sign);
+                </script>
+            </div>
+
+        </div>
+    </div>
+    <canvas class="orb-canvas"></canvas>
+
+    <script type="module">
+        import * as PIXI from "https://cdn.skypack.dev/pixi.js@5.x";
+        import { KawaseBlurFilter } from "https://cdn.skypack.dev/@pixi/filter-kawase-blur@3.2.0";
+        import SimplexNoise from "https://cdn.skypack.dev/simplex-noise@3.0.0";
+        import hsl from "https://cdn.skypack.dev/hsl-to-hex";
+
+        function random(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        function map(n, start1, end1, start2, end2) {
+            return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
+        }
+
+        const simplex = new SimplexNoise();
+
+        class ColorPalette {
+            constructor() {
+                this.setColors();
+                this.setCustomProperties();
+            }
+
+            setColors() {
+                // pick a random hue somewhere between 220 and 360
+
+                var h_r = ~~random(220, 360);
+                // console.log("Blob color: ", h_r);
+                this.hue = h_r;
+                this.complimentaryHue1 = this.hue + 30;
+                this.complimentaryHue2 = this.hue + 60;
+                this.saturation = 95;
+                this.lightness = 50;
+
+                this.baseColor = hsl(this.hue, this.saturation, this.lightness);
+                this.complimentaryColor1 = hsl(
+                    this.complimentaryHue1,
+                    this.saturation,
+                    this.lightness
+                );
+                this.complimentaryColor2 = hsl(
+                    this.complimentaryHue2,
+                    this.saturation,
+                    this.lightness
+                );
+
+                this.colorChoices = [
+                    this.baseColor,
+                    this.complimentaryColor1,
+                    this.complimentaryColor2
+                ];
+            }
+
+            randomColor() {
+                return this.colorChoices[~~random(0, this.colorChoices.length)].replace(
+                    "#",
+                    "0x"
+                );
+            }
+
+            setCustomProperties() {
+                document.documentElement.style.setProperty("--hue", this.hue);
+                document.documentElement.style.setProperty(
+                    "--hue-complimentary1",
+                    this.complimentaryHue1
+                );
+                document.documentElement.style.setProperty(
+                    "--hue-complimentary2",
+                    this.complimentaryHue2
+                );
+            }
+        }
+
+        class Orb {
+            constructor(fill = 0x000000) {
+                this.bounds = this.setBounds();
+                this.x = random(this.bounds["x"].min, this.bounds["x"].max);
+                this.y = random(this.bounds["y"].min, this.bounds["y"].max);
+
+                this.scale = 1;
+
+                this.fill = fill;
+
+                this.radius = random(window.innerHeight / 6, window.innerHeight / 3);
+
+                this.xOff = random(0, 1000);
+                this.yOff = random(0, 1000);
+                this.inc = 0.002;
+
+                this.graphics = new PIXI.Graphics();
+                this.graphics.alpha = 0.825;
+
+
+            }
+
+            setBounds() {
+                const maxDist =
+                    window.innerWidth < 1000 ? window.innerWidth / 3 : window.innerWidth / 5;
+                const originX = window.innerWidth / 1.25;
+                const originY =
+                    window.innerWidth < 1000
+                        ? window.innerHeight
+                        : window.innerHeight / 1.375;
+
+                return {
+                    x: {
+                        min: originX - maxDist,
+                        max: originX + maxDist
+                    },
+                    y: {
+                        min: originY - maxDist,
+                        max: originY + maxDist
+                    }
+                };
+            }
+
+            update() {
+                const xNoise = simplex.noise2D(this.xOff, this.xOff);
+                const yNoise = simplex.noise2D(this.yOff, this.yOff);
+                const scaleNoise = simplex.noise2D(this.xOff, this.yOff);
+
+                this.x = map(xNoise, -1, 1, this.bounds["x"].min, this.bounds["x"].max);
+                this.y = map(yNoise, -1, 1, this.bounds["y"].min, this.bounds["y"].max);
+                this.scale = map(scaleNoise, -1, 1, 0.5, 1);
+
+                this.xOff += this.inc;
+                this.yOff += this.inc;
+            }
+
+            render() {
+                this.graphics.x = this.x;
+                this.graphics.y = this.y;
+                this.graphics.scale.set(this.scale);
+
+                this.graphics.clear();
+
+                this.graphics.beginFill(this.fill);
+                this.graphics.drawCircle(0, 0, this.radius);
+                this.graphics.endFill();
+            }
+        }
+
+        const app = new PIXI.Application({
+            view: document.querySelector(".orb-canvas"),
+            resizeTo: window,
+            transparent: true
+        });
+
+        app.stage.filters = [new KawaseBlurFilter(30, 10, true)];
+
+        const colorPalette = new ColorPalette();
+
+        const orbs = [];
+
+        for (let i = 0; i < 10; i++) {
+            const orb = new Orb(colorPalette.randomColor());
+
+            app.stage.addChild(orb.graphics);
+
+            orbs.push(orb);
+        }
+
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            app.ticker.add(() => {
+                orbs.forEach((orb) => {
+                    orb.update();
+                    orb.render();
+                });
+            });
+        } else {
+            orbs.forEach((orb) => {
+                orb.update();
+                orb.render();
+            });
+        }
+
+
+    </script>
+
+
+
+    <script>
+        var i = 0;
+        var e = 0.9;
+        const speed = 100;
+
+        const title = ["&nbsp;", "&nbsp;", "|", "|", "&nbsp;", "&nbsp;", "|", "|", "&nbsp;", "&nbsp;", "C|", "CO|", "COD|", "CODE|", "CODEX|", "CODEXI|", "CODEXIS|", "CODEXIST"];
+        function cont_zoom() {
+            if (e <= 1) {
+                document.getElementById("cont-box").style.transform = "scale(" + e + ")";
+                e = e + 0.01;
+                setTimeout(cont_zoom, 10);
+            }
+
+        }
+
+        function app_ind_dash() {
+            cont_zoom();
+            $("#index-dash").fadeIn("slow");
+        }
+
+        function dis_com() {
+            $("#com-name").fadeOut();
+            setTimeout(app_ind_dash, 500);
+        }
+
+        function titleWriter() {
+
+            if (i < title.length) {
+                document.getElementById("title").innerHTML = title[i];
+                i++;
+                setTimeout(titleWriter, speed);
+            }
+            else {
+
+                 setTimeout(dis_com, 1000);
+            }
+        }
+
+        function app_com_name() {
+            $("#com-name").fadeIn(300);
+            setTimeout(titleWriter, 250);
+
+
+        }
+
+        setTimeout(app_com_name, 1000);
+        <!--        app_ind_dash();-->
+    </script>
+
+
+    <script>
+        let x = document.cookie;
+        // console.log("cookie " + x);
+    </script>
+
+
+    <script>
+        function loader(progress) {
+            if (progress < 15) {
+                $("#progress-bar").fadeIn();
+                document.getElementById("progress-bar").style.width = "15vw";
+            }
+            if (progress > 15) {
+                //            console.log("increasing the progress bar");
+                document.getElementById("progress-bar").style.width = progress + "vw";
+            }
+            function load_fade() {
+
+            }
+            if (progress == 100) {
+                $("#progress-bar").fadeOut(1000);
+            }
+        }
+
+        function content_updator(url, elementId) {
+            loader(10);
+            var xhr = new XMLHttpRequest();
+            var progress = 0;
+
+            xhr.onprogress = function (event) {
+                if (event.lengthComputable) {
+                    progress = (event.loaded / event.total) * 100;
+                    //              console.log('Progress:', progress + '%');
+                    loader(progress);
+                }
+            };
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = xhr.responseText;
+                        $("#" + elementId).html(response);
+                    }
+                    else {
+                        console.error('Request failed with status:', xhr.status);
+                    }
+                }
+            };
+
+            xhr.open('POST', url);
+            xhr.send();
+
+        }
+
+        function spaup(url) {
+            loader(10);
+            var xhr = new XMLHttpRequest();
+            var progress = 0;
+
+            xhr.onprogress = function (event) {
+                if (event.lengthComputable) {
+                    progress = (event.loaded / event.total) * 100;
+                    //              console.log('Progress:', progress + '%');
+                    loader(progress);
+                }
+            };
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = xhr.responseText;
+                        console.log(response);
+                        const bod = response.split("OyzEw");
+                        console.log("bod[0]", bod[0]);
+                        console.log("bod[1]", bod[1]);
+                        $("#nav-bar").html(bod[0]);
+                        $("#cont-box").html(bod[1]);
+                        setTimeout(dis_com, 1000);
+                    }
+                    else {
+                        console.error('Request failed with status:', xhr.status);
+                    }
+                }
+            };
+
+            xhr.open('POST', url);
+            xhr.send();
+
+        }
+
+    </script>
+
+</body>
+
+</html>
